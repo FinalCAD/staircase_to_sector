@@ -5,4 +5,5 @@ module StaircaseToSector
   extend ActiveSupport::Autoload
 
   autoload :Lib
+  autoload :Metadata
 end
