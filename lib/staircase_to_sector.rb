@@ -7,4 +7,5 @@ module StaircaseToSector
   autoload :Lib
   autoload :Metadata
   autoload :Models
+  autoload :Feeder
 end
