@@ -3,16 +3,14 @@ module StaircaseToSector
     class Zone
       include Base
 
-      private
-
-      def _name
-        if super =~ /-=-/
-          super.split('-=-').first
-        elsif super =~ /-==-/
-          super.split('-=+-').first
+      def short_name
+        Pathname(if name.to_s =~ /-=-/
+          name.to_s.split('-=-').first
+        elsif name.to_s =~ /-==-/
+          name.to_s.split('-=+-').first
         else
-          super
-        end
+          name.to_s
+        end)
       end
 
     end

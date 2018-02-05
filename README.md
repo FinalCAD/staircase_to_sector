@@ -32,7 +32,60 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to add `file_model` gem https://rubygems.org/gems/file_model
+
+```
+require 'file_model'
+```
+
+Define your model based on `FileModel::Model::File` to override behavior
+
+```
+class StaircaseFileModel
+  include FileModel::Model::File
+
+  def skip?
+    false # Need all files and directories
+  end
+end
+```
+
+Use the `FileModel::Import::Dir` of `file_model`
+
+```
+source_path = '../file_model/spec/fixtures/archive/input'
+import = FileModel::Import::Dir.new(source_path: source_path, model: StaircaseFileModel)
+```
+
+Create the directory where you want your output files
+
+```
+export_path = Dir.mktmpdir
+FileUtils.mkdir_p(export_path)
+```
+
+Get on instance of store for keep the instantiated models
+
+```
+store = FileModel::Store::Memory.instance
+```
+
+store your files
+
+```
+import.each { |model| store << model }
+```
+
+Process you files
+
+```
+processor_klass = StaircaseToSector::Processors::StaircaseComposer
+options = {}
+export = FileModel::Export::Dir.new(export_path: export_path, processor: processor_klass, options: options, store: store)
+export.each(options) do |model|
+  puts("File: #{model.source_path} Successfully treated")
+end
+```
 
 ## Development
 

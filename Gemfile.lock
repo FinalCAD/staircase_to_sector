@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/FinalCAD/file_model
-  revision: 640d34882650c413f91e25aa1ed602b5872bcf33
+  revision: 74a70532d461c8a7579e2726db5169de8c20282d
   specs:
     file_model (0.1.0)
       activemodel (~> 4.2)
@@ -123,7 +123,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tins (1.16.3)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     unparser (0.2.6)
       abstract_type (~> 0.0.7)

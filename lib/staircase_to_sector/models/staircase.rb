@@ -11,12 +11,12 @@ module StaircaseToSector
       end
 
       def name
-        exploded_path.last
+        Pathname(exploded_path.last)
       end
       alias_method :full_name, :name
 
       def dir_path
-        "Staircases#{File::SEPARATOR}#{name}"
+        Pathname("Staircases#{File::SEPARATOR}#{name}")
       end
 
       def number_of_images

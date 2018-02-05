@@ -40,7 +40,7 @@ module StaircaseToSector
         return true
       end
     end
-    alias_method :<<, :store
+    alias_method :<<, :append
 
     class ModelName
 

@@ -4,8 +4,9 @@ module StaircaseToSector
       extend ActiveSupport::Concern
       include FileModel::Model::File
 
+      # StaircaseToSector::Feeder need all files, including directories
       def skip?
-        !(extension.to_s =~ /\.png$|\.json$/)
+        # !(extension.to_s =~ /\.png$|\.json$/)
       end
     end
   end
