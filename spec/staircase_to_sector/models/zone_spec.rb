@@ -4,7 +4,7 @@ RSpec.describe StaircaseToSector::Models::Zone do
 
   subject { described_class.new(path, context) }
 
-  it do
+  it 'ensure model act as expected' do
     expect(subject.name.to_s).to        eql('A Zone-=-Architecte')
     expect(subject.extension).to        eql('.png')
     expect(subject.full_name.to_s).to   eql('A Zone-=-Architecte.png')

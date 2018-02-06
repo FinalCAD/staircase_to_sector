@@ -4,7 +4,7 @@ RSpec.describe StaircaseToSector::Models::Sector do
 
   subject { described_class.new(path, context) }
 
-  it do
+  it 'ensure model act as expected' do
     expect(subject.name.to_s).to        eql('A Sector')
     expect(subject.extension).to        eql('.png')
     expect(subject.full_name.to_s).to   eql('A Sector.png')

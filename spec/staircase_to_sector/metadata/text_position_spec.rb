@@ -42,10 +42,11 @@ RSpec.describe StaircaseToSector::Metadata::TextPosition do
 
   subject { described_class.new(metadata: zone_metadata, layout_dimension: layout_dimension, image_dimension: size.image_dimension) }
 
-  # let(:sector_position)  { StaircaseToSector::Lib::SectorPosition.new(dimension: size.image_dimension, marge: marge, footer: 32.0) }
-
-  it do
+  it 'should re-calculated metadata information' do
     first_position = marge
+
+    # Same as :
+    # sector_position = StaircaseToSector::Lib::SectorPosition.new(dimension: size.image_dimension, marge: marge, footer: 32.0)
     # first_position = sector_position.coordinate(column: 0, row: 0)
 
     [

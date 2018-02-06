@@ -12,6 +12,7 @@ module StaircaseToSector
         @cursor = Cursor.new(columns: columns, rows: rows)
       end
 
+      # Move to the next cell of the matrix, See Cursor#move
       def move
         @cursor.move
       end

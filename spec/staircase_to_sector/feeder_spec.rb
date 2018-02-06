@@ -14,8 +14,6 @@ RSpec.describe StaircaseToSector::Feeder do
   end
 
   context 'Add a Staircase' do
-    # let(:model) { SimpleFileModel.new('spec/fixtures/archive/input/Staircases/Staircase Name 1') }
-
     [
       'spec/fixtures/archive/input/Staircases',
       'spec/fixtures/archive/input/Staircases/Staircase Name 1/Sectors',
@@ -24,7 +22,7 @@ RSpec.describe StaircaseToSector::Feeder do
       it { expect(subject.append(SimpleFileModel.new(path_to_ignore))).to eql(false) }
     end
 
-    it do
+    it 'should initiated the right model according the path' do
       model = SimpleFileModel.new('spec/fixtures/archive/input/Staircases/Staircase Name 1')
 
       # Add Staircase

@@ -38,7 +38,7 @@ RSpec.describe StaircaseToSector::Lib::Size do
       resize: { width: 984.9, height: 849.0 }
     }
   ].each do |info|
-    context do
+    context 'should provide the right image dimesion' do
       let(:grid) { StaircaseToSector::Lib::Grid.new(info.dig(:number_of_images)) }
 
       let(:width)   { info.dig(:resize, :width) }

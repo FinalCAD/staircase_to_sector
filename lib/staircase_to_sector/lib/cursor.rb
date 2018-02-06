@@ -1,3 +1,6 @@
+# Public:
+# Iterate on each cell of the matrix
+#
 module StaircaseToSector
   module Lib
     class Cursor

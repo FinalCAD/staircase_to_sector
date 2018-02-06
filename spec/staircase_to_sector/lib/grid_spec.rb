@@ -6,7 +6,7 @@ RSpec.describe StaircaseToSector::Lib::Grid do
     4 => { columns: 2, rows: 2 },
     5 => { columns: 3, rows: 2 }
   }.each do |number_of_images, grid|
-    it do
+    it 'should give the right matrix according to the amount of images' do
       g = described_class.new(number_of_images)
       expect(g.columns).to eql(grid[:columns])
       expect(g.rows).to eql(grid[:rows])

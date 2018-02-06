@@ -1,3 +1,5 @@
+# Public: Chain processes the all processes
+#
 module StaircaseToSector
   module Processors
     class StaircaseComposer < StaircaseToSector::Processors::Base
@@ -16,6 +18,8 @@ module StaircaseToSector
         Processors::Metadata::Sector.new(options).process(model: staircase_model, context: context)
         # Set the new metadata for a Zone based on the created Staircase
         Processors::Metadata::Zone.new(options).process(model: staircase_model, context: context)
+
+        nil
       end
 
     end

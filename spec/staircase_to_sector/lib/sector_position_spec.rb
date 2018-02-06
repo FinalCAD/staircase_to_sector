@@ -24,7 +24,7 @@ RSpec.describe StaircaseToSector::Lib::SectorPosition do
       position: { x: 1065.0, y: 897.0 }
     }
   ].each do |info|
-    context do
+    context 'should provide the right position according, marge, position and size of the images' do
       let(:width)   { info.dig(:image, :size, :width) }
       let(:height)  { info.dig(:image, :size, :height) }
       let(:column)  { info.dig(:matrix, :cell, :column) }

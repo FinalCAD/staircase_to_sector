@@ -4,7 +4,7 @@ RSpec.describe StaircaseToSector::Models::Staircase do
 
   subject { described_class.new(path, context) }
 
-  it do
+  it 'ensure model act as expected' do
     expect(subject.name.to_s).to eql('A Staircase')
     expect(subject.full_name.to_s).to eql('A Staircase')
 

@@ -3,6 +3,7 @@ module StaircaseToSector
     class Zone
       include Base
 
+      # Handle the case of subview
       def short_name
         Pathname(if name.to_s =~ /-=-/
           name.to_s.split('-=-').first

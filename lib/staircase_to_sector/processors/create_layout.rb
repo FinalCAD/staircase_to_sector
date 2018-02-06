@@ -1,3 +1,5 @@
+# Public: Create the Layout to receive the composition of the images
+#
 module StaircaseToSector
   module Processors
     class CreateLayout < StaircaseToSector::Processors::Base

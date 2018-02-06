@@ -3,7 +3,7 @@ RSpec.describe StaircaseToSector::Lib::Cursor do
 
     subject { described_class.new(columns: 3, rows: 2) }
 
-    it do
+    it 'should move the cursor on the next cell of the matrix' do
       {
         1 => { column: 0, row: 0 },
         2 => { column: 1, row: 0 },

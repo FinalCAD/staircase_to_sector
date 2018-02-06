@@ -21,7 +21,7 @@ RSpec.describe StaircaseToSector::Lib::TextPosition do
       coordinate: { x: 503.0, y: 853.0 }
     }
   ].each do |info|
-    context do
+    context 'should provide the legend text position' do
       let(:position) { StaircaseToSector::Lib::Point.new(y: info.dig(:position, :y), x: info.dig(:position, :x)) }
 
       subject { described_class.new(pointsize: pointsize, image_dimension: image_dimension, layout_dimension: layout_dimension) }
