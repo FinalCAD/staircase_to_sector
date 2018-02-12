@@ -12,7 +12,7 @@ module StaircaseToSector
       #
       # Returns a Boolean
       def skip?
-        !model.source_path.match(/Staircases/)
+        !source_path.to_s.match(/Staircases/)
       end
     end
   end
